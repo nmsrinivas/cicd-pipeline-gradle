@@ -1,13 +1,11 @@
 pipeline {
  agent any
  stages{
-  stage('Checkout external proj') {
+  stage('Checkout') {
         steps {
-            git branch: 'master',
-                credentialsId: 'nmsrinivas',
-                url: 'ssh://git@github.com:nmsrinivas/cicd-pipeline-gradle.git'
-
-            sh "ls -lat"
+           dir('Master-Git')
+                credentialsId: 'GITHUB',
+                url: 'ssh://git@github.com:nmsrinivas/cicd-pipeline-gradle.git
         }
     }
   stage('Build') {
