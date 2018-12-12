@@ -5,7 +5,7 @@ pipeline {
    steps {
    echo 'Running Build Automation'
    sh './gradlew build --no-daemon'
-   archiveArtifacts arifacts: 'dist/sampleapp.zip'
+   archiveArtifacts artifacts: 'dist/sampleapp.zip'
    }
   }
  }
