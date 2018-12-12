@@ -3,7 +3,7 @@ pipeline {
  stages{
   stage('Checkout') {
         steps {
-           dir('Master-Git')
+           dir('cicd-pipeline-gradle')
                 git credentialsId: 'GITHUB', url: 'ssh://git@github.com:nmsrinivas/cicd-pipeline-gradle.git
         }
     }
