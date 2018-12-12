@@ -2,9 +2,8 @@ pipeline {
  agent any
  stages{
   stage('Checkout') {
-        steps {
-           dir('cicd-pipeline-gradle')
-                git credentialsId: 'GITHUB', url: 'ssh://git@github.com:nmsrinivas/cicd-pipeline-gradle.git'
+   steps {
+                git credentialsId: 'GITHUB', url: 'https://github.com/nmsrinivas/cicd-pipeline-gradle.git'
         }
     }
   stage('Build') {
